@@ -5,7 +5,9 @@ This is a Lambda function to backup your MongoDB database as an archive to S3. T
 ## Getting Started
 
 Download the lambda-function.zip
+
 Upload the zip to your Lambda function.
+
 Fill out the required environment variables.
 
 ```
@@ -19,6 +21,7 @@ BACKUPDB
 ```
 
 Add S3 policy to lambda role to allow Lambda to access S3.
+
 Configure Lambda timeout according to DB size and network speed.
 
 ## Tests
