@@ -19,6 +19,7 @@ BACKUPDB
 ```
 
 Add S3 policy to lambda role to allow Lambda to access S3.
+Configure Lambda timeout according to DB size and network speed.
 
 ## Tests
 

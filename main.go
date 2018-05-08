@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/aws/aws-lambda-go/lambda"
 	"gopkg.in/pipe.v2"
@@ -17,7 +18,7 @@ func runBackup() (string, error) {
 	var exitMessage string
 
 	// Get Env Variables and assign
-	fileName := os.Getenv("FILENAME")
+	fileName := os.Getenv("FILENAME") + "-" + time.Now().Format("20060102150405")
 	bucketName := os.Getenv("BUCKETNAME")
 	mongoHost := os.Getenv("MONGOHOST")
 	mongoUsername := os.Getenv("MONGOUSERNAME")
